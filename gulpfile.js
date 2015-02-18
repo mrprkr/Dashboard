@@ -2,14 +2,7 @@ var gulp = require('gulp');
 var bower = require ('gulp-bower');
 var sass = require ('gulp-sass');
 var notify = require ('gulp-notify');
-// var templateCache = require ('gulp-angular-templatecache')
 var browserSync = require ('browser-sync');
-// var modRewrite  = require('connect-modrewrite');
-// var middleware = require('middleware');
-// var streamqueue = require('streamqueue');
-
-//Compile views into an angular $templateCache module
-//Move them to a temp folder, we'll add them to public later
 
 
 //Move files in html to public/
@@ -61,9 +54,9 @@ gulp.task('watch', function(){
 //Refresh the browser if any files change
 gulp.task('serve', function () {
 		var files = [
-		'./public/**/*.html',
-		'./public/src/**/*.js',
-		'./public/src/css/*.css',
+		'./public/*.html',
+		'./public/**/*.js',
+		'./public/css/*.css',
 	];
 
     browserSync.init(files, {
