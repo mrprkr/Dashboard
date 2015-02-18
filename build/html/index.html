@@ -7,12 +7,26 @@
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 <body ng-controller="main-controller">
+<div class="container">	
+	<div class="headlines">
+	<h4>News headlines</h4>
+	<ul>
+	<li ng-repeat="article in news.results | limitTo: 5"><hr/>{{article.webTitle}}</li>
+	</ul>
+	</div>
 
-<p>Weather:</p>
-<p>{{weather.condition}}, {{weather.currentTemp}}&#176;C</p>
-<br/>
-<p>Time:</p>
-<p>{{time}}</p>
+<div class="time">
+	<p>{{time}}</p>
+</div>
 
+
+<div class="weather">
+	<p>Weather:</p>
+	<p>{{weather.condition}}, {{weather.currentTemp}}&#176;C</p>
+</div>
+
+</div>
+
+<br/><br/>
 </body>
 </html>
